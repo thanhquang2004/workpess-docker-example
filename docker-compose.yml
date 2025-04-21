@@ -40,9 +40,9 @@ services:
     networks:
       - my_network
     ports:
-      - "80:80"
+      - "80:80" # Ánh xạ port 80 ra ngoài
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro # File cấu hình Nginx
     depends_on:
       - wordpress
 
